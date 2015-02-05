@@ -36,7 +36,7 @@ sleep 3
 #forwarder=/etc/logstash-forwarder
 #test -f forwarder.orig || cp $forwarder $forwarder.orig
 
-cat << EOF > $forwarder
+cat << EOF > /etc/logstash-forwarder
 {
   "network": {
     "servers": [ "10.145.37.106:5000" ],
