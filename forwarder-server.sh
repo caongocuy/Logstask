@@ -46,8 +46,8 @@ sleep 3
 
 sudo apt-get install nginx -y
 cd ~; wget https://gist.githubusercontent.com/thisismitch/2205786838a6a5d61f55/raw/f91e06198a7c455925f6e3099e3ea7c186d0b263/nginx.conf
-sed -i 's/kibana.myhost.org/FQDN/g' /etc/uycn.txt
-sed -i 's/usr\/share\/kibana3/var\/www\/kibana3/g' /etc/uycn.txt
+sed -i 's/kibana.myhost.org/FQDN/g' nginx.conf
+sed -i 's/usr\/share\/kibana3/var\/www\/kibana3/g' nginx.conf
 sudo cp nginx.conf /etc/nginx/sites-available/default
 #sudo apt-get install apache2-utils -y
 #sudo htpasswd -c /etc/nginx/conf.d/kibana.myhost.org.htpasswd uycn
@@ -114,6 +114,6 @@ EOF
 sudo service logstash restart
 
 #### day crt sang client ####
-scp /etc/pki/tls/certs/logstash-forwarder.crt root@10.145.37.109:/tmp
+scp /etc/pki/tls/certs/logstash-forwarder.crt root@172.16.69.220:/tmp
 
 echo "#### XONG ROI !! CHEN' THOI :) ####"
