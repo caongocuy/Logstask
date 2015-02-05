@@ -35,7 +35,7 @@ cd ~; wget https://download.elasticsearch.org/kibana/kibana/kibana-3.0.1.tar.gz
 tar xvf kibana-3.0.1.tar.gz
 
 ### cau hinh ###
-sudo vi ~/kibana-3.0.1/config.js
+#sudo vi ~/kibana-3.0.1/config.js
 sed -i 's/9200/80/g' ~/kibana-3.0.1/config.js
 sudo mkdir -p /var/www/kibana3
 sudo cp -R ~/kibana-3.0.1/* /var/www/kibana3/
