@@ -33,8 +33,8 @@ echo "### CAU HINH LOGSTASH-FORWARDER ###"
 
 sleep 3
 
-forwarder=/etc/logstash-forwarder
-test -f forwarder.orig || cp $forwarder $forwarder.orig
+#forwarder=/etc/logstash-forwarder
+#test -f forwarder.orig || cp $forwarder $forwarder.orig
 
 cat << EOF > $forwarder
 {
