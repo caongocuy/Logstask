@@ -20,8 +20,8 @@ sudo apt-get update
 sudo apt-get install logstash-forwarder
 
 ### CAU HINH TU DONG RUN CHO LOGSTASH-FORWARDER ###
-cd /etc/init.d/; sudo wget https://raw.github.com/elasticsearch/logstash-forwarder/master/logstash-forwarder.init -O logstash-forwarder
-
+#cd /etc/init.d/; sudo wget https://raw.github.com/elasticsearch/logstash-forwarder/master/logstash-forwarder.init -O logstash-forwarder
+cd /etc/init.d/; sudo wget https://raw.githubusercontent.com/elasticsearch/logstash-forwarder/a73e1cb7e43c6de97050912b5bb35910c0f8d0da/logstash-forwarder.init -O logstash-forwarder
 ### CAP QUYEN THUC THI ###
 sudo chmod +x logstash-forwarder
 sudo update-rc.d logstash-forwarder defaults
