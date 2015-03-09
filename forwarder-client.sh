@@ -9,8 +9,9 @@ sleep 3
 ### ADD repo ###
 echo 'deb http://packages.elasticsearch.org/logstashforwarder/debian stable main' | sudo tee /etc/apt/sources.list.d/logstashforwarder.list
 
-### ADD key de khac phuc loi NO PUB KEY ###
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D27D666CD88E42B4
+### ADD key de khac phuc loi NO PUB KEY ### Tai GPG key cho Logstash-forwarder ###
+#sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D27D666CD88E42B4
+wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
 
 ### UPDATE he thong ###
 sudo apt-get update
